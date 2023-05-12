@@ -1,0 +1,92 @@
+
+
+TO DO
+	change Minimap.m_exploreRadius?
+
+
+IN-GAME
+	start collecting Tar (drain pits, kill tar creatures)
+
+
+CHECK
+		
+	
+
+IMPLEMENTED
+	no supplies crafting
+	god mode
+	infinite stamina
+	infinite weight
+	teleport
+	spawn items
+	
+	increase/adjust fly speed
+	no consuming supplies when eating
+	no using arrows when firing
+		ItemDrop.ItemData.ItemType (9 = ammo)
+		patch:
+			Inventory.RemoveOneItem
+				ItemDrop.ItemData.m_shared.m_food > 0f (food)
+			Inventory.RemoveItem
+				return false
+	always have wind at back
+		Ship.IsWindControllActive (return true)
+		add ": OFF/ON" to button
+		move button above Fly Mode
+	HealSelf should also restore Stamina
+	"Allow Restricted..." to "Unrestricted Teleport"
+		move to Upgrades section
+	skill hacks: just affect all to 100, make button
+	teleports to new tab
+	no consumable use for:
+		Fireplace (Interact)
+		Smelter (OnAddFuel)
+	add checkbox to Upgrades (activate all)
+	kiln not working for auto-feeding
+		kiln is a smelter
+		kiln considers wood to be an ore
+	repair all in radius
+	add spacer to repair/refuel options
+	do not consume mead
+	do not consume trophies
+		Player.ConsumeItem(Inventory, ItemData) : bool
+		ItemStand.UpdateAttach() void
+		ArmorStand.UpdateAttach() void
+	remove _eventzone from spawnable entity list
+	portal filter by only what's shown on map
+		Minimap.m_visibleIconTypes : bool[]
+			if (m_visibleIconTypes[(int)pin.m_type]
+			&& (m_sharedMapDataFade > 0f || pin.m_ownerID == 0L))
+	add "Allow Spawning" button
+		resets to No after spawning item
+		move to bottom of section
+	megadamage (pick + axe?)
+		postfix: hitData.SetAttacker(m_character);
+		hitData.m_damage.Modify(m_damageMultiplier);
+
+	emotes popup
+		Player.StartEmote(string emote, bool oneshot = true)
+			blowkiss
+			bow
+			challenge
+			comehere
+			kneel
+			point
+			wave
+
+			cheer
+			dance
+			flex
+			headbang
+			roar
+			sit
+
+			cower
+			cry
+			despair
+			laugh
+			nonono
+			shrug
+			thumbsup
+
+		point: Player.m_localPlayer.FaceLookDirection();
