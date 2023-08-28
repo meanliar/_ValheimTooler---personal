@@ -1,3 +1,5 @@
+ALL OF THIS IS A FORK OF SOMEONE ELSE'S WORK. I've maintained the README below for context but I've been only building this for personal use and only through Harmony/BepInEx so if it's janky at the edges don't be surprised.
+
 <h1 align="center">
   <br>
   <img src="./docs/images/valheimtooler_logo.png" alt="Valheim Tooler" width="300">
