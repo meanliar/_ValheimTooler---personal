@@ -13,6 +13,10 @@ namespace ValheimTooler.Core
     {
         public static bool s_repairallinrange = false;
         public static bool s_refuelallinrange = false;
+        public static bool s_extendeddemister = false;
+        public static bool s_wardupdateractive = false;
+        public static long player_id = 0L;
+        public static string player_name = "none";
 
         private static bool s_allowspawner = false;
         private static string s_entityQuantityText = "1";
@@ -23,7 +27,6 @@ namespace ValheimTooler.Core
 
         private static float s_updateTimer = 0f;
         private static readonly float s_updateTimerInterval = 1.5f;
-
 
         private static readonly List<string> s_entityLevels = new List<string>();
 
@@ -78,6 +81,13 @@ namespace ValheimTooler.Core
                             EntryPoint.s_showItemGiver = !EntryPoint.s_showItemGiver;
                         }
 
+                        /*
+                        if (GUILayout.Button(VTLocalization.instance.Localize("$vt_entities_ward_updater")))
+                        {
+                            UpdateWards();
+                        }
+                        */
+
                         if (GUILayout.Button(VTLocalization.instance.Localize("$vt_entities_drops_button")))
                         {
                             RemoveAllDrops();
@@ -97,6 +107,11 @@ namespace ValheimTooler.Core
                         if (GUILayout.Button(VTLocalization.instance.Localize("$vt_refuelallinrange : " + (s_refuelallinrange ? VTLocalization.s_cheatOn : VTLocalization.s_cheatOff))))
                         {
                             s_refuelallinrange = !s_refuelallinrange;
+                        }
+
+                        if (GUILayout.Button(VTLocalization.instance.Localize("$vt_extendeddemister : " + (s_extendeddemister ? VTLocalization.s_cheatOn : VTLocalization.s_cheatOff))))
+                        {
+                            s_extendeddemister = !s_extendeddemister;
                         }
 
                     }
@@ -234,5 +249,33 @@ namespace ValheimTooler.Core
                 }
             }
         }
+
+        private static void UpdateWards()
+        {
+            if (Player.m_localPlayer != null)
+            {
+
+                foreach (Player player in Player.GetAllPlayers())
+                {
+                    PrivateArea[] wards = UnityEngine.Object.FindObjectsOfType<PrivateArea>();
+                    foreach (PrivateArea ward in wards)
+                    {
+                        var distance = Vector3.Distance(Camera.main.transform.position, ward.transform.position);
+                        if (distance < 51)
+                        {
+                            ZNetView m_nview = ward.GetFieldValue<ZNetView>("m_nview");
+                            EntitiesItemsHacks.s_wardupdateractive = true;
+                            EntitiesItemsHacks.player_id = player.GetPlayerID();
+                            EntitiesItemsHacks.player_name = player.GetPlayerName();
+                            m_nview.InvokeRPC("TogglePermitted", 0L, "none");
+                            EntitiesItemsHacks.s_wardupdateractive = false;
+                            EntitiesItemsHacks.player_id = 0L;
+                            EntitiesItemsHacks.player_name = "none";
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

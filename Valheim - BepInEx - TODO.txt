@@ -1,11 +1,16 @@
 
 
 TO DO
+	spawn Raid via Event
+
+	Dvergr circlet should have same armor as highest-level armor
+	RefuelInRange should not overload the hottub
 	change Minimap.m_exploreRadius?
 
 
 IN-GAME
-	start collecting Tar (drain pits, kill tar creatures)
+	Vaenstathr
+	SCOUTING
 
 
 CHECK
@@ -63,6 +68,8 @@ IMPLEMENTED
 	megadamage (pick + axe?)
 		postfix: hitData.SetAttacker(m_character);
 		hitData.m_damage.Modify(m_damageMultiplier);
+	hottub insta-refuel at range
+	wards with players already added to them
 
 	emotes popup
 		Player.StartEmote(string emote, bool oneshot = true)

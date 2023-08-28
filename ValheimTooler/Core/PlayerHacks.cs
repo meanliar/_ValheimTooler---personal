@@ -64,15 +64,14 @@ namespace ValheimTooler.Core
                         if (GUILayout.Button(VTLocalization.instance.Localize("$vt_player_inf_stamina_me : " + (s_isInfiniteStaminaMe ? VTLocalization.s_cheatOn : VTLocalization.s_cheatOff))))
                         {
                             s_isInfiniteStaminaMe = !s_isInfiniteStaminaMe;
+                            s_inventoryNoWeightLimit = !s_inventoryNoWeightLimit;
                         }
+                        /*
                         if (GUILayout.Button(VTLocalization.instance.Localize("$vt_player_infinite_weight : " + (s_inventoryNoWeightLimit ? VTLocalization.s_cheatOn : VTLocalization.s_cheatOff))))
                         {
                             s_inventoryNoWeightLimit = !s_inventoryNoWeightLimit;
                         }
-                        if (GUILayout.Button(VTLocalization.instance.Localize("$vt_player_noplacement_cost : " + (Player.m_localPlayer.VTIsNoPlacementCost() ? VTLocalization.s_cheatOn : VTLocalization.s_cheatOff))))
-                        {
-                            Player.m_localPlayer.VTSetNoPlacementCost(!Player.m_localPlayer.VTIsNoPlacementCost());
-                        }
+                        */
                         if (GUILayout.Button(VTLocalization.instance.Localize("$vt_player_donotconsume : " + (s_doNotConsume ? VTLocalization.s_cheatOn : VTLocalization.s_cheatOff))))
                         {
                             s_doNotConsume = !s_doNotConsume;
@@ -80,6 +79,10 @@ namespace ValheimTooler.Core
                         if (GUILayout.Button(VTLocalization.instance.Localize("$vt_player_wind_power : " + (s_controlWind ? VTLocalization.s_cheatOn : VTLocalization.s_cheatOff))))
                         {
                             s_controlWind = !s_controlWind;
+                        }
+                        if (GUILayout.Button(VTLocalization.instance.Localize("$vt_player_noplacement_cost : " + (Player.m_localPlayer.VTIsNoPlacementCost() ? VTLocalization.s_cheatOn : VTLocalization.s_cheatOff))))
+                        {
+                            Player.m_localPlayer.VTSetNoPlacementCost(!Player.m_localPlayer.VTIsNoPlacementCost());
                         }
                     }
                     GUILayout.EndVertical();
@@ -150,7 +153,8 @@ namespace ValheimTooler.Core
                             {
                                 Player.m_localPlayer.VTHeal();
                             }
-                        }*/
+                        }
+                        */
 
                         if (GUILayout.Button(VTLocalization.instance.Localize("$vt_player_tame_creatures")))
                         {

@@ -90,7 +90,7 @@ namespace ValheimTooler.Patches
             ZNetView ___m_nview, int ___m_maxOre, float ___m_addOreAnimationDuration,
             Animator[] ___m_animators)
         {
-            if (PlayerHacks.s_doNotConsume && __instance.name.Contains("charcoal_kiln"))
+            if (PlayerHacks.s_doNotConsume && (__instance.name.Contains("charcoal_kiln") || __instance.name.Contains("bathtub")))
             {
                 if ((int)___m_nview.GetZDO().GetInt("queued") >= ___m_maxOre)
                 {

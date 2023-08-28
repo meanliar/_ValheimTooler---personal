@@ -394,7 +394,9 @@
     <Compile Include="Patches\DoNotConsume.cs" />
     <Compile Include="Patches\EdgeMapKill.cs" />
     <Compile Include="Patches\InfiniteStamina.cs" />
+    <Compile Include="Patches\ExtendedDemister.cs" />
     <Compile Include="Patches\Megadamage.cs" />
+    <Compile Include="Patches\WardUpdater.cs" />
     <Compile Include="Patches\RefuelInRange.cs" />
     <Compile Include="Patches\RepairInRange.cs" />
     <Compile Include="Patches\InstantCraft.cs" />
