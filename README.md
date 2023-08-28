@@ -39,8 +39,9 @@ ALL OF THIS IS A FORK OF SOMEONE ELSE'S WORK. I've maintained the README below f
 ValheimTooler is a free software that allows you to cheat on the Valheim game via a multitude of options offered. This project is purely for educational purposes, I am not responsible for the use you make of it. Be reasonable some features are particularly game breaker.
 
 Here is the list of features offered by this tool:
+***note that these have changed from the original version and I'm not keeping a features list, d/load it and see! Some things have been added, others removed which I didn't use, etc.***
 
-* **Player**
+* **Player** 
   * God Mode, you don't lose any more life
   * Unlimited stamina for you
   * Unlimited stamina for the other players
