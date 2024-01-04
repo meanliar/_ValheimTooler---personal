@@ -76,18 +76,6 @@ Here is the list of features offered by this tool:
 
 **⚠️ Warning ⚠️**: On each feature that allows you to choose a player, the list will only include players who are at a certain distance from you (quite large but not the whole map for all that). This is not a personal choice but a technical limitation of the game. Until I find a way to get around it (if possible) this behavior will remain.
 
-## Usage
-
-I made sure that you can install and run this tool easily. Just [go here](https://github.com/Astropilot/ValheimTooler/releases) to download the latest version. Take the .zip and extract it to any folder. Then run the `ValheimToolerLauncher.exe` and click on `Install`.
-
-If the button is not available it is likely that the program has not found the path to the game, specify it just below and the button should become clickable.
-
-Once the installation is complete, run the game with the launcher open. Once you get to the main menu (AND NOT BEFORE) of the game you can click on `Launch` and the cheat should appear in game. To show/hide the cheat window you can press `Del` on your keyboard.
-
-When a cheat update is available, the launcher allows you to update the cheat directly. A button will appear and you just have to click on it to automatically install the latest version!
-
-If you want to uninstall the cheat you just have to press the `Uninstall` button.
-
 **Note**: If the installation or uninstallation ever prevents the game from launching, you can always ask Steam to check the integrity of the game files and it will repair the corrupted files.
 
 Here is also a video tutorial explaining its installation and a demonstration of its features:
